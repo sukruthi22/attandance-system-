@@ -27,11 +27,14 @@ function Login({ setCurrentUser, showMessage }) {
 
       setCurrentUser(user);
       showMessage("Login successful");
+      alert("Logged in successfully");
       navigate("/dashboard");
     } catch (error) {
       console.error(error);
+
       const message = error.response?.data?.message || "Login failed";
       showMessage(message);
+      alert(message);
     }
   };
 

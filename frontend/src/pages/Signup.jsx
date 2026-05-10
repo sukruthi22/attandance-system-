@@ -27,11 +27,13 @@ function Signup({ setCurrentUser, showMessage }) {
 
       setCurrentUser(user);
       showMessage("Account created successfully");
+      alert("registeed")
       navigate("/dashboard");
     } catch (error) {
       console.error(error);
       const message = error.response?.data?.message || "Signup failed";
       showMessage(message);
+      alert(message)
     }
   };
 
