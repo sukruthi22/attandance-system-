@@ -7,7 +7,8 @@ function Login({ setCurrentUser, showMessage }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const loginUser = async () => {
+  const loginUser = async (e) => {
+    e.preventDefault();
     if (!email || !password) {
       showMessage("Please enter email and password");
       return;

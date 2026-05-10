@@ -11,7 +11,8 @@ function Signup({ setCurrentUser, showMessage }) {
     password: "",
   });
 
-  const signupUser = async () => {
+  const signupUser = async (e) => {
+    e.preventDefault();
     if (!form.name || !form.email || !form.password) {
       showMessage("Please fill all signup fields");
       return;
